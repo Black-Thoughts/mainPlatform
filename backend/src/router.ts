@@ -15,7 +15,6 @@ import { ContentPost, Thumbnail } from "./types/ContentPost.ts"
 
 const upload = multer();
 const bodyJsonParser = json();
-const App: express.Application = express();
 export const ExpressRouter: Router = express.Router()
 dotenv.config()
 const PORT = process.env.PORT
@@ -23,7 +22,7 @@ const PORT = process.env.PORT
 export class BlackThoughtsRouter {
   Server: Server;
 
-  constructor(client?: MongoClient) {
+  constructor(App: express.Application, client?: MongoClient) {
 
     if (client) {
       this.Server = new Server(client)
@@ -73,9 +72,9 @@ export class BlackThoughtsRouter {
     App.use(express.urlencoded({ extended: true })); 
     App.use(ExpressRouter);
 
-    App.listen(PORT, () => {
-      console.log("Server started on port", PORT);
-    });
+    // App.listen(PORT, () => {
+    //   console.log("Server started on port", PORT);
+    // });
 
             /**
      * Request to retrieve all Tracks

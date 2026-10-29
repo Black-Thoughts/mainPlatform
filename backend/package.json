@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "npx tsx watch --env-file=.env.development src/app.ts",
-    "server": "npx tsx --env-file=.env.development src/app.ts"
+    "server": "npx tsx --env-file=.env.production src/app.ts"
   },
   "dependencies": {
     "@types/react": "^19.3.0",
