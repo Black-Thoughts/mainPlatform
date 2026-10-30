@@ -40,7 +40,9 @@ export class BlackThoughtsRouter {
     const allowedOrigins = [
       config.clientOrigin,
       "http://localhost:5174",
+      "http://localhost:4173",
       config.runtimeOrigin,
+      "https://main-platform-wrlq.vercel.app"
     ]
 
     App.use(cors({
