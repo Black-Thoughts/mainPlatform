@@ -16,7 +16,7 @@ import {  IServiceResponse,
 
 //collection names
 
-type CollectionName = "Runtimes" | "Templates" | "Content Posts" | "Workspaces" | "Thumbnails" | "Users" | "Unknown";
+type CollectionName = "Runtimes" | "Templates" | "ContentPosts" | "Workspaces" | "Thumbnails" | "Users" | "Unknown";
 const runtimeCollectionName = "Runtimes";
 const templateCollectionName = "Templates";
 const contentPostCollectionName = "ContentPosts";
